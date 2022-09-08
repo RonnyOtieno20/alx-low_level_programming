@@ -1,14 +1,15 @@
 #include <stdio.h>
-
 /**
  *
- *  * main - Prints quote
+ *  * main - Entry point
  *
  *   *
  *
- *    * Return: zero on success
+ *    * Description: A C program that prints with put function
  *
  *     *
+ *
+ *      * Return: Always 0 (Success)
  *
  *      */
 int main(void)
