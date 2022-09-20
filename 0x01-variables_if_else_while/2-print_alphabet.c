@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/**
+/*
+ * ASCII numbers
  * main - Entry point
  *
  * Description: print all aplhabet letters
