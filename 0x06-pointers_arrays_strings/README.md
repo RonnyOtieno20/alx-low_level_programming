@@ -1,7 +1,5 @@
 # C - More pointers, arrays and strings
 
-In this project, I continued to practice using pointers, arrays and strings in C.
-
 ## Tests :heavy_check_mark:
 
 * [tests](./tests): Folder of test files. Provided by Holberton School.
