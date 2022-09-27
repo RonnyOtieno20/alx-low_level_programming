@@ -14,6 +14,7 @@
  * Return: A pointer to the filled memory
  *         area @s
  */
+#include "main.h"
 
 char *_memset(char *s, char b, unsigned int n)
 {
