@@ -22,28 +22,9 @@
 
  */
 
-
-
-int main(int argc, char __attribute__((unused)) *argv[])
-  
+int main(int argc, char __attribute__((__unused__)) *argv[])
 {
-  
-  int i = 0, m;
-  
+	printf("%d\n", argc - 1);
 
-  
-  while (i < argc)
-    
-    {
-      
-      m = i;
-      
-      i++;
-      
-    }
-  
-  printf("%d\n", m);
-  
-  return (0);
-  
+	return (0);
 }
