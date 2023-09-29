@@ -12,9 +12,8 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	/* Check if index is larger than the number of bits */
 	if (index >= (sizeof(*n) * 8))
 		return (-1);
-
 	/* Set the bit at the specified index to 0 */
-	*n &= ~(1 << index);;
+	*n &= ~(1 << index);
 
 	return (1);
 }
