@@ -25,7 +25,8 @@ void print_binary(unsigned long int n)
 			flag = 1;
 		}
 		else if (flag) /* Only print '0's after the first '1' has been
-				  encountered */
+				* encountered
+				*/
 		{
 			_putchar('0');
 		}

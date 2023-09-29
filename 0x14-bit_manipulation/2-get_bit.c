@@ -9,8 +9,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	/* Check if index is larger than the number of bits in unsigned
-	   ong int */
+	/* Check if index is larger than the number of bits */
 	if (index >= (sizeof(n) * 8))
 		return (-1);
 
