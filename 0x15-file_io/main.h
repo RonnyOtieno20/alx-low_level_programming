@@ -22,6 +22,11 @@ int append_text_to_file(const char *filename, char *text_content);
 
 /* Task 3 */
 int copy_file(const char *file_from, const char *file_to);
+void error_handler(const char *msg, const char *filename, int status);
+int open_file(const char *filename, int flags, const char *errmsg, int status);
+void copy_content(int fd_r, int fd_w, char *src, char *dest);
+void close_files(int fd1, int fd2);
+
 
 /* Task 4 (Advanced) */
 void check_elf(unsigned char *e_ident);
