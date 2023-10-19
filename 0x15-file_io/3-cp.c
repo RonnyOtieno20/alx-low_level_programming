@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 void error_handler(const char *msg, const char *filename, int status)
 {
 	if (filename)
-		dprintf(STDERR_FILENO, "%s %s\n", msg, filename);
+		dprintf(STDERR_FILENO, "%s%s\n", msg, filename);
 	else
 		dprintf(STDERR_FILENO, "%s\n", msg);
 	exit(status);
@@ -71,10 +71,10 @@ void copy_content(int fd_r, int fd_w, char *src, char *dest)
 	while ((x = read(fd_r, buf, BUFSIZ)) > 0)
 	{
 		if (write(fd_w, buf, x) != x)
-			error_handler("Err: Can't write to ", dest, 99);
+			error_handler("Error: Can't write to ", dest, 99);
 	}
 	if (x < 0)
-		error_handler("Err: Can't read from file ", src, 98);
+		error_handler("Error: Can't read from file ", src, 98);
 }
 
 /**
@@ -85,7 +85,13 @@ void copy_content(int fd_r, int fd_w, char *src, char *dest)
 void close_files(int fd1, int fd2)
 {
 	if (close(fd1) < 0)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+		exit(100);
+	}
 	if (close(fd2) < 0)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
+		exit(100);
+	}
 }
