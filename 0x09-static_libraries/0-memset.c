@@ -1,16 +1,24 @@
 #include "main.h"
 
 /**
- * _isupper - check the code for Holberton School students.
+ * _memset - fills memory with a constant byte
+ * @s: pointer to the memory area to be filled
+ * @b: the character to fill the memory area with
+ * @n: the number of bytes to be filled
  *
- * @c: is an integer param
- *
- * Return: Always 0.
+ * Return: a pointer to the memory area s
  */
-
-
-int _isupper(int c)
+char *_memset(char *s, char b, unsigned int n)
 {
+    unsigned int i;
 
-	return (c >= 65 && c <= 90);
+    if (s == NULL)
+        return( NULL);
+
+    for (i = 0; i < n; i++)
+    {
+        s[i] = b;
+    }
+
+    return (s);
 }

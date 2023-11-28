@@ -1,23 +1,30 @@
 #include "main.h"
 
 /**
- * _isalpha - check the code for Holberton School students.
+ * _strpbrk - searches a string for any of a set of bytes
+ * @s: the string to be scanned
+ * @accept: the string containing the characters to match
  *
- * @c: is c an integer argument
- *
- * Return: Always 0.
+ * Return: a pointer to the character in s that matches one of the characters in accept,
+ * or NULL if no such character is found
  */
-
-int _isalpha(int c)
+char *_strpbrk(char *s, char *accept)
 {
+    int i, j;
 
-	if (c >= 97 && c <= 122)
+    if (s == NULL || accept == NULL)
+        return (NULL);
+
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        for (j = 0; accept[j] != '\0'; j++)
 	{
-		return (1);
-	}
-	else if (c >= 65 && c <= 90)
-	{
-		return (1);
-	}
-	return (0);
+            if (s[i] == accept[j])
+	    {
+                return &s[i];
+            }
+        }
+    }
+
+    return (NULL);
 }
