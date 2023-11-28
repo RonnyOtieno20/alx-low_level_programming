@@ -1,6 +1,8 @@
 #ifndef FILE_MAIN
 #define FILE_MAIN
 
+#include <stddef.h>
+
 /*copy list from task*/
 
 int _putchar(char c);
