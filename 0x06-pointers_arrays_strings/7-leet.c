@@ -17,20 +17,24 @@
 */
 char *leet(char *s)
 {
-	int i = 0, j, temp;
+	int i;
+	int j;
+	int k;
 
-	char a[] = "oOlLeEaAtT";
-	char b[] = "0011334477";
+	char l[] = "oOlLeEaAtT";
+	char e[] = "0011334477";
 
+	i = 0;
 	while (s[i] != '\0')
 	{
 		j = 0;
-		while (a[j] != '\0')
+		k = 0;
+		while (l[j] != '\0')
 		{
-			if (s[i] == a[j])
+			if (s[i] == l[j])
 			{
-				temp = b[j];
-				s[i] = temp;
+				k = j;
+				s[i] = e[k];
 			}
 			j++;
 		}
