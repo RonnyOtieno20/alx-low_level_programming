@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -shared -o 101-gm_override.so -fPIC 101-gm_override.c
-export LD_PRELOAD="$PWD/101-gm_override.so"
+wget -P .. https://raw.githubusercontent.com/monoprosito/holbertonschool-low_level_programming/master/0x18-dynamic_libraries/libgiga.so
+export LD_PRELOAD="$PWD/../libgiga.so"
